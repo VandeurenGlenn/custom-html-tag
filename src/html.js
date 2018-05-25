@@ -36,7 +36,6 @@ const html = (strings, ...keys) => {
         } else if(value === undefined && !Array.isArray(key)) {
           value = set[i].value; // set previous value, doesn't require developer to pass all properties set
         }
-
         const string = JSON.stringify(strings[i + 1]).replace(/\r?\\n|\r/g, '').replace(/"/g, '');
         const stringLength = string.length;
         const start = template.length;
@@ -73,7 +72,7 @@ const html = (strings, ...keys) => {
         template += `${value}${string}`;
       });
     } else {
-      template += `${value}${string}`;
+      template += JSON.stringify(strings[0]).replace(/\r?\\n|\r/g, '').replace(/"/g, '');
     }
     return {
       template,
