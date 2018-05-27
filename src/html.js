@@ -24,6 +24,10 @@ const set = [];
  */
 const html = (strings, ...keys) => {
   return ((...values) => {
+    // support property-mixin (properties.name.value)
+    if (value[0].value) {
+      values = values.map(o => o.value);
+    }
     const dict = values[values.length - 1] || {};
     let template = strings[0];
     let setChanged = false;
