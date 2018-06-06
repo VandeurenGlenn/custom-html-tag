@@ -5,6 +5,7 @@
 <script src="node_modules/custom-html-tag/html.js"></script>
 <script src="node_modules/custom-renderer/render.js"></script>
 <script>
+  const html = new HTMLTag();
   const span = document.createElement('span');
   const template = html`<p>${'variable'}</p>`;
   render(span, template, {variable: 'hello'}); // <p>hello</p>
