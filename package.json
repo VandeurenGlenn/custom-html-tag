@@ -1,6 +1,6 @@
 {
   "name": "custom-html-tag",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "main": "html.js",
   "module": "src/html.js",
   "repository": "https://github.com/vandeurenglenn/custom-html-tag",
